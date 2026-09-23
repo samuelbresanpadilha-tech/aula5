@@ -1,0 +1,166 @@
+:root {
+    --cor-fundo: #01080E;
+    --cor-principal: #0B0D20;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+    --cor-hover: #1a9bb5;
+    }
+    
+    /* Configurações gerais */
+    
+    * {
+    box-sizing: border-box;
+    }
+    
+    body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    
+    margin: 0;
+    padding: 20px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    
+    /* Caixa principal */
+    
+    .caixa-principal {
+    background-color: var(--cor-principal);
+    
+    width: 90%;
+    max-width: 700px;
+    
+    text-align: center;
+    
+    padding: 30px;
+    
+    border-radius: 15px;
+    
+    box-shadow: 0 0 20px rgba(43, 222, 253, 0.15);
+    }
+    
+    
+    /* Título */
+    
+    h1 {
+    color: var(--cor-destaque);
+    
+    margin-bottom: 30px;
+    }
+    
+    
+    /* Perguntas */
+    
+    .caixa-perguntas {
+    font-size: 20px;
+    line-height: 1.6;
+    
+    margin-bottom: 25px;
+    }
+    
+    
+    /* Alternativas */
+    
+    .caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+    
+    
+    /* Botões */
+    
+    button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    
+    border: 2px solid transparent;
+    border-radius: 15px;
+    
+    padding: 15px;
+    
+    font-size: 16px;
+    
+    cursor: pointer;
+    
+    transition: 0.3s;
+    }
+    
+    button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    
+    border-color: var(--cor-destaque);
+    
+    transform: scale(1.02);
+    }
+    
+    
+    /* Resultado */
+    
+    .caixa-resultado {
+    display: none;
+    
+    margin-top: 30px;
+    
+    background-color: var(--cor-secundaria);
+    
+    padding: 25px;
+    
+    border-radius: 15px;
+    
+    /* Direcionando o texto */
+    text-align: left;
+    
+    line-height: 1.7;
+    }
+    
+    
+    /*
+    Classe adicionada pelo JavaScript
+    quando todas as perguntas terminam.
+    */
+    
+    .mostrar-resultado {
+    display: block;
+    }
+    
+    
+    .texto-resultado {
+    margin: 0;
+    
+    color: var(--cor-texto);
+    
+    font-size: 17px;
+    }
+    
+    
+    /* Responsividade */
+    
+    @media (max-width: 600px) {
+    
+    .caixa-principal {
+    width: 100%;
+    padding: 20px;
+    }
+    
+    h1 {
+    font-size: 25px;
+    }
+    
+    .caixa-perguntas {
+    font-size: 17px;
+    }
+    
+    button {
+    font-size: 15px;
+    }
+    }
